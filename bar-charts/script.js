@@ -92,7 +92,7 @@ d3.tsv('data.tsv', type, function(err, data) {
         .attr('height', function(d, i) { return x(d.value); });
     bars.append('text')
         .style('dy', '.35em')
-        .attr('x', 12.5)
+        .attr('x', 9.5)
         .attr('y', 12.5)
         .text(function(d) { return d.value; });
 });
