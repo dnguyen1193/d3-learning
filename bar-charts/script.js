@@ -72,12 +72,12 @@
 var totalHeight = 420,
     barWidth = 20;
 var x = d3.scaleLinear()
-          .range([0, totalHeight]);
+          .range([totalHeight, 0]);
 var svg = d3.select('.chart')
             .attr('width', totalHeight);
 d3.tsv('data.tsv', type, function(err, data) {
     console.log(data);
-    x.domain([0, d3.max(data, function(d) { return d.value; })]);
+    x.domain([d3.max(data, function(d) { return d.value; }), 0]);
     svg.attr('height', barWidth*data.length);
     var bars = svg.selectAll('g')
                     .data(data)
