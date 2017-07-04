@@ -93,7 +93,7 @@ d3.tsv('data.tsv', type, function(err, data) {
     bars.append('text')
         .style('dy', '.35em')
         .attr('x', 12.5)
-        .attr('y', function(d) { return x(d.value) - 2; })
+        .attr('y', 12.5)
         .text(function(d) { return d.value; });
 });
 
