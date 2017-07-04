@@ -84,8 +84,8 @@ d3.tsv('data.tsv', type, function(err, data) {
                   .enter().append('g')
                     .attr('transform',
                           function(d, i) {
-                            return 'translate('
-                                    + i*20 +', 0)';
+                            return 'translate('+ i*20 +', '
+                                    + (totalHeight - x(d.value)) + ')';
                           });
     bars.append('rect')
         .attr('width', barWidth - 1)
