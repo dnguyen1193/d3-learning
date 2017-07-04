@@ -88,8 +88,8 @@ d3.tsv('data.tsv', type, function(err, data) {
                                     + i*20 +')';
                           });
     bars.append('rect')
-        .attr('height', barWidth - 1)
-        .attr('width', function(d, i) { return x(d.value); });
+        .attr('width', barWidth - 1)
+        .attr('height', function(d, i) { return x(d.value); });
     bars.append('text')
         .style('dy', '.35em')
         .attr('y', 12.5)
