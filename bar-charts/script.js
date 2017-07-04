@@ -69,12 +69,12 @@
 // }
 
 // code for rotated static SVG bar chart w/ data load
-var totalWidth = 420,
+var totalHeight = 420,
     barWidth = 20;
 var x = d3.scaleLinear()
-          .range([0, totalWidth]);
+          .range([0, totalHeight]);
 var svg = d3.select('.chart')
-            .attr('width', totalWidth);
+            .attr('width', totalHeight);
 d3.tsv('data.tsv', type, function(err, data) {
     console.log(data);
     x.domain([0, d3.max(data, function(d) { return d.value; })]);
